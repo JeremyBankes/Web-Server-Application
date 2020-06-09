@@ -1,0 +1,25 @@
+{
+  "name": "web-server-application",
+  "version": "1.0.0",
+  "description": "A web server application built to serve multiple websites from the same machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremyBankes/Web-Server-Application.git"
+  },
+  "keywords": [
+    "Web",
+    "Server",
+    "Node",
+    "Express"
+  ],
+  "author": "Jeremy Bankes",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JeremyBankes/Web-Server-Application/issues"
+  },
+  "homepage": "https://github.com/JeremyBankes/Web-Server-Application#readme"
+}
