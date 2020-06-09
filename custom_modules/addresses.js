@@ -1,4 +1,4 @@
-const ipLocation = require('ipLocation');
+const ipLocation = require('iplocation');
 
 let MAX_ADDRESS_CACHE = 10;
 let ADDRESS_BANK = {};
