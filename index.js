@@ -15,7 +15,7 @@ function matchWebsite(origin) {
     return 'default';
 }
 
-app.use(addresses.use(false));
+app.use(addresses);
 app.use((req, res, next) => {
     res.set('X-Powered-By', 'Love');
     next();
