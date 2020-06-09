@@ -6,7 +6,7 @@ let ADDRESS_BANK = {};
 function onRequest(req, ipData) {
     if (!ipData.reserved) {
         console.log(`Received request from ${ipData.country.name}, ${ipData.region.name}, ${ipData.city}`);
-        if (addLocationToRequest) req.location = ipData;
+        req.location = ipData;
     } else {
         console.error(`Received reserved request`);
     }
