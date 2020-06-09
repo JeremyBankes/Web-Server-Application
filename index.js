@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 app.use(express.static('public'));
 
 app.get('*', (req, res) => {
-    const origin = req.get('host') | req.get('origin');
+    const origin = req.get('host') || req.get('origin');
     if (origin) {
         const website = matchWebsite(origin);
         let path = `${__dirname}/sites/${website}/public${req.originalUrl}`;
