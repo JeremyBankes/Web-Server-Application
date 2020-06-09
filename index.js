@@ -23,16 +23,20 @@ app.use((req, res, next) => {
 app.use(express.static('public'));
 
 app.get('*', (req, res) => {
-    const origin = req.get('host');
-    const website = matchWebsite(origin);
-    let path = `${__dirname}/sites/${website}/public${req.originalUrl}`;
-    fs.exists(path, exists => {
-        if (exists) {
-            res.sendFile(path);
-        } else {
-            res.end();
-        }
-    });
+    const origin = req.get('host') | req.get('origin');
+    if (origin) {
+        const website = matchWebsite(origin);
+        let path = `${__dirname}/sites/${website}/public${req.originalUrl}`;
+        fs.exists(path, exists => {
+            if (exists) {
+                res.sendFile(path);
+            } else {
+                res.end();
+            }
+        });
+    } else {
+        res.end();
+    }
 });
 
 app.listen(PORT, () => {
