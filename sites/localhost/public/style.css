@@ -1,0 +1,51 @@
+:root {
+    --background-primary: #333333;
+    --foreground-primary: #EEEEEE;
+    --link-primary: #A9D3E8;
+    --link-secondary: #80CBF2;
+}
+
+html {
+    background-color: var(--background-primary);
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: var(--foreground-primary);
+}
+
+a {
+    color: var(--link-primary);
+    text-decoration: none;
+    transition: color 0.5s ease-out;
+}
+
+a:hover {
+    color: var(--link-secondary);
+    text-decoration: none;
+}
+
+section.content {
+    text-align: center;
+}
+
+span.advertise {
+    display: inline-block;
+    padding-top: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+    section.content {
+        width: 60%;
+        margin: auto;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    section.content {
+        width: 50%;
+        margin: auto;
+        text-align: left;
+    }
+}
